@@ -1,4 +1,5 @@
 {
+    "name": "consciousplanet/earthpoints-api-php",
     "repositories": [
       {
         "type": "vcs",
