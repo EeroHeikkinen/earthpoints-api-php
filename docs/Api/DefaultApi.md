@@ -1267,7 +1267,7 @@ No authorization required
 ## `platformConnectionControllerCreate()`
 
 ```php
-platformConnectionControllerCreate($body)
+platformConnectionControllerCreate($create_platform_connection_dto)
 ```
 
 
@@ -1285,10 +1285,10 @@ $apiInstance = new OpenAPI\Client\Api\DefaultApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = array('key' => new \stdClass); // object
+$create_platform_connection_dto = new \OpenAPI\Client\Model\CreatePlatformConnectionDto(); // \OpenAPI\Client\Model\CreatePlatformConnectionDto
 
 try {
-    $apiInstance->platformConnectionControllerCreate($body);
+    $apiInstance->platformConnectionControllerCreate($create_platform_connection_dto);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->platformConnectionControllerCreate: ', $e->getMessage(), PHP_EOL;
 }
@@ -1298,7 +1298,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **object**|  |
+ **create_platform_connection_dto** | [**\OpenAPI\Client\Model\CreatePlatformConnectionDto**](../Model/CreatePlatformConnectionDto.md)|  |
 
 ### Return type
 
@@ -1742,7 +1742,7 @@ No authorization required
 ## `userControllerCreate()`
 
 ```php
-userControllerCreate($body)
+userControllerCreate($create_user_dto)
 ```
 
 
@@ -1760,10 +1760,10 @@ $apiInstance = new OpenAPI\Client\Api\DefaultApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = array('key' => new \stdClass); // object
+$create_user_dto = new \OpenAPI\Client\Model\CreateUserDto(); // \OpenAPI\Client\Model\CreateUserDto
 
 try {
-    $apiInstance->userControllerCreate($body);
+    $apiInstance->userControllerCreate($create_user_dto);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->userControllerCreate: ', $e->getMessage(), PHP_EOL;
 }
@@ -1773,7 +1773,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **object**|  |
+ **create_user_dto** | [**\OpenAPI\Client\Model\CreateUserDto**](../Model/CreateUserDto.md)|  |
 
 ### Return type
 
