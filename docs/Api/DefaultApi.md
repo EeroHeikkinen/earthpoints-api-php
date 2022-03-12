@@ -47,7 +47,7 @@ Method | HTTP request | Description
 ## `appControllerCreate()`
 
 ```php
-appControllerCreate($create_point_event_dto)
+appControllerCreate($create_point_event_dto): \OpenAPI\Client\Model\CreatePointEventResponseDto
 ```
 
 
@@ -72,7 +72,8 @@ $apiInstance = new OpenAPI\Client\Api\DefaultApi(
 $create_point_event_dto = new \OpenAPI\Client\Model\CreatePointEventDto(); // \OpenAPI\Client\Model\CreatePointEventDto
 
 try {
-    $apiInstance->appControllerCreate($create_point_event_dto);
+    $result = $apiInstance->appControllerCreate($create_point_event_dto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->appControllerCreate: ', $e->getMessage(), PHP_EOL;
 }
@@ -86,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\CreatePointEventResponseDto**](../Model/CreatePointEventResponseDto.md)
 
 ### Authorization
 
@@ -95,7 +96,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -604,7 +605,7 @@ No authorization required
 ## `appControllerLoginWithClientCredentials()`
 
 ```php
-appControllerLoginWithClientCredentials($client_credentials_dto)
+appControllerLoginWithClientCredentials($client_credentials_dto): \OpenAPI\Client\Model\ClientCredentialsResponseDto
 ```
 
 
@@ -625,7 +626,8 @@ $apiInstance = new OpenAPI\Client\Api\DefaultApi(
 $client_credentials_dto = new \OpenAPI\Client\Model\ClientCredentialsDto(); // \OpenAPI\Client\Model\ClientCredentialsDto
 
 try {
-    $apiInstance->appControllerLoginWithClientCredentials($client_credentials_dto);
+    $result = $apiInstance->appControllerLoginWithClientCredentials($client_credentials_dto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->appControllerLoginWithClientCredentials: ', $e->getMessage(), PHP_EOL;
 }
@@ -639,7 +641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\ClientCredentialsResponseDto**](../Model/ClientCredentialsResponseDto.md)
 
 ### Authorization
 
@@ -648,7 +650,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

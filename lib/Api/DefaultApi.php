@@ -122,11 +122,12 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\CreatePointEventResponseDto
      */
     public function appControllerCreate($create_point_event_dto)
     {
-        $this->appControllerCreateWithHttpInfo($create_point_event_dto);
+        list($response) = $this->appControllerCreateWithHttpInfo($create_point_event_dto);
+        return $response;
     }
 
     /**
@@ -136,7 +137,7 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CreatePointEventResponseDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function appControllerCreateWithHttpInfo($create_point_event_dto)
     {
@@ -177,10 +178,44 @@ class DefaultApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 201:
+                    if ('\OpenAPI\Client\Model\CreatePointEventResponseDto' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreatePointEventResponseDto', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CreatePointEventResponseDto';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CreatePointEventResponseDto',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -214,14 +249,24 @@ class DefaultApi
      */
     public function appControllerCreateAsyncWithHttpInfo($create_point_event_dto)
     {
-        $returnType = '';
+        $returnType = '\OpenAPI\Client\Model\CreatePointEventResponseDto';
         $request = $this->appControllerCreateRequest($create_point_event_dto);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -270,11 +315,11 @@ class DefaultApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -2332,11 +2377,12 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \OpenAPI\Client\Model\ClientCredentialsResponseDto
      */
     public function appControllerLoginWithClientCredentials($client_credentials_dto)
     {
-        $this->appControllerLoginWithClientCredentialsWithHttpInfo($client_credentials_dto);
+        list($response) = $this->appControllerLoginWithClientCredentialsWithHttpInfo($client_credentials_dto);
+        return $response;
     }
 
     /**
@@ -2346,7 +2392,7 @@ class DefaultApi
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\ClientCredentialsResponseDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function appControllerLoginWithClientCredentialsWithHttpInfo($client_credentials_dto)
     {
@@ -2387,10 +2433,44 @@ class DefaultApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            switch($statusCode) {
+                case 201:
+                    if ('\OpenAPI\Client\Model\ClientCredentialsResponseDto' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ClientCredentialsResponseDto', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\ClientCredentialsResponseDto';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\ClientCredentialsResponseDto',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
@@ -2424,14 +2504,24 @@ class DefaultApi
      */
     public function appControllerLoginWithClientCredentialsAsyncWithHttpInfo($client_credentials_dto)
     {
-        $returnType = '';
+        $returnType = '\OpenAPI\Client\Model\ClientCredentialsResponseDto';
         $request = $this->appControllerLoginWithClientCredentialsRequest($client_credentials_dto);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2480,11 +2570,11 @@ class DefaultApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                [],
+                ['application/json'],
                 ['application/json']
             );
         }

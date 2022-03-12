@@ -62,7 +62,8 @@ $apiInstance = new OpenAPI\Client\Api\DefaultApi(
 $create_point_event_dto = new \OpenAPI\Client\Model\CreatePointEventDto(); // \OpenAPI\Client\Model\CreatePointEventDto
 
 try {
-    $apiInstance->appControllerCreate($create_point_event_dto);
+    $result = $apiInstance->appControllerCreate($create_point_event_dto);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->appControllerCreate: ', $e->getMessage(), PHP_EOL;
 }
@@ -117,7 +118,10 @@ Class | Method | HTTP request | Description
 ## Models
 
 - [ClientCredentialsDto](docs/Model/ClientCredentialsDto.md)
+- [ClientCredentialsResponseDto](docs/Model/ClientCredentialsResponseDto.md)
 - [CreatePointEventDto](docs/Model/CreatePointEventDto.md)
+- [CreatePointEventResponseDto](docs/Model/CreatePointEventResponseDto.md)
+- [PointEvent](docs/Model/PointEvent.md)
 - [UpdatePointEventDto](docs/Model/UpdatePointEventDto.md)
 
 ## Authorization
