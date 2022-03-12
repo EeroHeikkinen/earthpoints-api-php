@@ -28,5 +28,3 @@ lib/Model/PointEvent.php
 lib/Model/UpdatePointEventDto.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/CreatePlatformConnectionDtoTest.php
-test/Model/CreateUserDtoTest.php

@@ -150,8 +150,10 @@ Class | Method | HTTP request | Description
 
 - [ClientCredentialsDto](docs/Model/ClientCredentialsDto.md)
 - [ClientCredentialsResponseDto](docs/Model/ClientCredentialsResponseDto.md)
+- [CreatePlatformConnectionDto](docs/Model/CreatePlatformConnectionDto.md)
 - [CreatePointEventDto](docs/Model/CreatePointEventDto.md)
 - [CreatePointEventResponseDto](docs/Model/CreatePointEventResponseDto.md)
+- [CreateUserDto](docs/Model/CreateUserDto.md)
 - [PointEvent](docs/Model/PointEvent.md)
 - [UpdatePointEventDto](docs/Model/UpdatePointEventDto.md)
 
