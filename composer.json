@@ -1,5 +1,5 @@
 {
-    "name": "consciousplanet/earthpoints-api-php",
+    "name": "eeroheikkinen/earthpoints-api-php",
     "repositories": [
       {
         "type": "vcs",
