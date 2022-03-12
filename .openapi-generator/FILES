@@ -6,8 +6,10 @@ composer.json
 docs/Api/DefaultApi.md
 docs/Model/ClientCredentialsDto.md
 docs/Model/ClientCredentialsResponseDto.md
+docs/Model/CreatePlatformConnectionDto.md
 docs/Model/CreatePointEventDto.md
 docs/Model/CreatePointEventResponseDto.md
+docs/Model/CreateUserDto.md
 docs/Model/PointEvent.md
 docs/Model/UpdatePointEventDto.md
 git_push.sh
@@ -17,12 +19,14 @@ lib/Configuration.php
 lib/HeaderSelector.php
 lib/Model/ClientCredentialsDto.php
 lib/Model/ClientCredentialsResponseDto.php
+lib/Model/CreatePlatformConnectionDto.php
 lib/Model/CreatePointEventDto.php
 lib/Model/CreatePointEventResponseDto.php
+lib/Model/CreateUserDto.php
 lib/Model/ModelInterface.php
 lib/Model/PointEvent.php
 lib/Model/UpdatePointEventDto.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/CreatePointEventResponseDtoTest.php
-test/Model/PointEventTest.php
+test/Model/CreatePlatformConnectionDtoTest.php
+test/Model/CreateUserDtoTest.php

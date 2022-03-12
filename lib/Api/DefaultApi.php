@@ -5077,29 +5077,29 @@ class DefaultApi
     /**
      * Operation platformConnectionControllerCreate
      *
-     * @param  object $body body (required)
+     * @param  \OpenAPI\Client\Model\CreatePlatformConnectionDto $create_platform_connection_dto create_platform_connection_dto (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function platformConnectionControllerCreate($body)
+    public function platformConnectionControllerCreate($create_platform_connection_dto)
     {
-        $this->platformConnectionControllerCreateWithHttpInfo($body);
+        $this->platformConnectionControllerCreateWithHttpInfo($create_platform_connection_dto);
     }
 
     /**
      * Operation platformConnectionControllerCreateWithHttpInfo
      *
-     * @param  object $body (required)
+     * @param  \OpenAPI\Client\Model\CreatePlatformConnectionDto $create_platform_connection_dto (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function platformConnectionControllerCreateWithHttpInfo($body)
+    public function platformConnectionControllerCreateWithHttpInfo($create_platform_connection_dto)
     {
-        $request = $this->platformConnectionControllerCreateRequest($body);
+        $request = $this->platformConnectionControllerCreateRequest($create_platform_connection_dto);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5148,14 +5148,14 @@ class DefaultApi
     /**
      * Operation platformConnectionControllerCreateAsync
      *
-     * @param  object $body (required)
+     * @param  \OpenAPI\Client\Model\CreatePlatformConnectionDto $create_platform_connection_dto (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function platformConnectionControllerCreateAsync($body)
+    public function platformConnectionControllerCreateAsync($create_platform_connection_dto)
     {
-        return $this->platformConnectionControllerCreateAsyncWithHttpInfo($body)
+        return $this->platformConnectionControllerCreateAsyncWithHttpInfo($create_platform_connection_dto)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5166,15 +5166,15 @@ class DefaultApi
     /**
      * Operation platformConnectionControllerCreateAsyncWithHttpInfo
      *
-     * @param  object $body (required)
+     * @param  \OpenAPI\Client\Model\CreatePlatformConnectionDto $create_platform_connection_dto (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function platformConnectionControllerCreateAsyncWithHttpInfo($body)
+    public function platformConnectionControllerCreateAsyncWithHttpInfo($create_platform_connection_dto)
     {
         $returnType = '';
-        $request = $this->platformConnectionControllerCreateRequest($body);
+        $request = $this->platformConnectionControllerCreateRequest($create_platform_connection_dto);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5202,17 +5202,17 @@ class DefaultApi
     /**
      * Create request for operation 'platformConnectionControllerCreate'
      *
-     * @param  object $body (required)
+     * @param  \OpenAPI\Client\Model\CreatePlatformConnectionDto $create_platform_connection_dto (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function platformConnectionControllerCreateRequest($body)
+    public function platformConnectionControllerCreateRequest($create_platform_connection_dto)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
+        // verify the required parameter 'create_platform_connection_dto' is set
+        if ($create_platform_connection_dto === null || (is_array($create_platform_connection_dto) && count($create_platform_connection_dto) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling platformConnectionControllerCreate'
+                'Missing the required parameter $create_platform_connection_dto when calling platformConnectionControllerCreate'
             );
         }
 
@@ -5239,11 +5239,11 @@ class DefaultApi
         }
 
         // for model (json/xml)
-        if (isset($body)) {
+        if (isset($create_platform_connection_dto)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($body));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($create_platform_connection_dto));
             } else {
-                $httpBody = $body;
+                $httpBody = $create_platform_connection_dto;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -7033,29 +7033,29 @@ class DefaultApi
     /**
      * Operation userControllerCreate
      *
-     * @param  object $body body (required)
+     * @param  \OpenAPI\Client\Model\CreateUserDto $create_user_dto create_user_dto (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function userControllerCreate($body)
+    public function userControllerCreate($create_user_dto)
     {
-        $this->userControllerCreateWithHttpInfo($body);
+        $this->userControllerCreateWithHttpInfo($create_user_dto);
     }
 
     /**
      * Operation userControllerCreateWithHttpInfo
      *
-     * @param  object $body (required)
+     * @param  \OpenAPI\Client\Model\CreateUserDto $create_user_dto (required)
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userControllerCreateWithHttpInfo($body)
+    public function userControllerCreateWithHttpInfo($create_user_dto)
     {
-        $request = $this->userControllerCreateRequest($body);
+        $request = $this->userControllerCreateRequest($create_user_dto);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7104,14 +7104,14 @@ class DefaultApi
     /**
      * Operation userControllerCreateAsync
      *
-     * @param  object $body (required)
+     * @param  \OpenAPI\Client\Model\CreateUserDto $create_user_dto (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userControllerCreateAsync($body)
+    public function userControllerCreateAsync($create_user_dto)
     {
-        return $this->userControllerCreateAsyncWithHttpInfo($body)
+        return $this->userControllerCreateAsyncWithHttpInfo($create_user_dto)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7122,15 +7122,15 @@ class DefaultApi
     /**
      * Operation userControllerCreateAsyncWithHttpInfo
      *
-     * @param  object $body (required)
+     * @param  \OpenAPI\Client\Model\CreateUserDto $create_user_dto (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function userControllerCreateAsyncWithHttpInfo($body)
+    public function userControllerCreateAsyncWithHttpInfo($create_user_dto)
     {
         $returnType = '';
-        $request = $this->userControllerCreateRequest($body);
+        $request = $this->userControllerCreateRequest($create_user_dto);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7158,17 +7158,17 @@ class DefaultApi
     /**
      * Create request for operation 'userControllerCreate'
      *
-     * @param  object $body (required)
+     * @param  \OpenAPI\Client\Model\CreateUserDto $create_user_dto (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function userControllerCreateRequest($body)
+    public function userControllerCreateRequest($create_user_dto)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
+        // verify the required parameter 'create_user_dto' is set
+        if ($create_user_dto === null || (is_array($create_user_dto) && count($create_user_dto) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling userControllerCreate'
+                'Missing the required parameter $create_user_dto when calling userControllerCreate'
             );
         }
 
@@ -7195,11 +7195,11 @@ class DefaultApi
         }
 
         // for model (json/xml)
-        if (isset($body)) {
+        if (isset($create_user_dto)) {
             if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($body));
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($create_user_dto));
             } else {
-                $httpBody = $body;
+                $httpBody = $create_user_dto;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
